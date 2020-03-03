@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gpu">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".i79700kActivity">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="288dp"
+            android:layout_height="233dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/zotacrtx2060" />
+
+        <Button
+            android:id="@+id/addToBuild"
+            android:layout_width="154dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="24dp"
+            android:text="Add To Build"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/amazon"
+            android:layout_width="154dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="16dp"
+            android:text="Buy Now!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addToBuild" />
+
+        <Button
+            android:id="@+id/google"
+            android:layout_width="154dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="16dp"
+            android:text="Search On Google!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amazon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

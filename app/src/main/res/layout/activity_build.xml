@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BuildActivity">
+
+    <ScrollView
+        android:layout_width="416dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/buildName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Build Name:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/theirBuildName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Their Build Name"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buildName"
+                app:layout_constraintStart_toEndOf="@+id/buildName" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Budget Used"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buildName" />
+
+            <TextView
+                android:id="@+id/theirTotalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="$0.00"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cost"
+                app:layout_constraintStart_toEndOf="@+id/cost" />
+
+            <TextView
+                android:id="@+id/selectParts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Select Your Parts!"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewCPU"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectCPU"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectParts">
+
+                <TextView
+                    android:id="@+id/theirCPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No CPU Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cpuimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirCPU"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewMOBO"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectMOBO"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewCPU">
+
+                <ImageView
+                    android:id="@+id/moboimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirMOBO"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirMOBO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No MOBO Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewGPU"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectGPU"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewMOBO">
+
+                <ImageView
+                    android:id="@+id/gpuimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirGPU"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirGPU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No GPU Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewRAM"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectRAM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewGPU">
+
+                <ImageView
+                    android:id="@+id/ramimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirRAM"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirRAM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No RAM Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewSTORAGE"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectSTORAGE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewRAM">
+
+                <ImageView
+                    android:id="@+id/storageimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirSTORAGE"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirSTORAGE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No Storage Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewPSU"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectPSU"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewSTORAGE">
+
+                <ImageView
+                    android:id="@+id/psuimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirPSU"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirPSU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No Power Supply Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_viewCASE"
+                android:layout_width="381dp"
+                android:layout_height="180dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#B7000000"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="selectCASE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_viewPSU">
+
+                <ImageView
+                    android:id="@+id/caseimageView"
+                    android:layout_width="87dp"
+                    android:layout_height="124dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/theirCASE"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/noimagefound" />
+
+                <TextView
+                    android:id="@+id/theirCASE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="No Case Selected"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/saveBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Save Build"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

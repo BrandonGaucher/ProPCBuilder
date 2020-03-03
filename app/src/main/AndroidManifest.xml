@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.propcbuilder">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".storage"></activity>
+        <activity android:name=".mobo" />
+        <activity android:name=".psu" />
+        <activity android:name=".ram" />
+        <activity android:name=".gpu" />
+        <activity android:name=".cases" />
+        <activity android:name=".cpu" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".storageList" />
+        <activity android:name=".ramList" />
+        <activity android:name=".psuList" />
+        <activity android:name=".moboList" />
+        <activity android:name=".gpuList" />
+        <activity android:name=".cpuList" />
+        <activity android:name=".caseList" />
+        <activity android:name=".NewBuildForm" />
+        <activity android:name=".BuildActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
