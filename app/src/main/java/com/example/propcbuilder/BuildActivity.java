@@ -2,12 +2,17 @@ package com.example.propcbuilder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 public class BuildActivity extends AppCompatActivity {
@@ -30,6 +35,10 @@ public class BuildActivity extends AppCompatActivity {
     static int storageImage = 0;
     static int psuImage = 0;
     static int caseImage = 0;
+
+    //file for save
+    static String FILE_NAME = "data.txt";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,5 +124,33 @@ public class BuildActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //save the build
+    public void save(View view) {
+        String combined = name + "," + totalPrice + "," + budget + "," + cpuName + "," + moboName + "," + gpuName + "," + ramName + "," + storageName + "," + psuName + "," + caseName + "\n";
+        FileOutputStream fos = null;
+        try {
+            fos = openFileOutput(FILE_NAME, Context.MODE_APPEND);
+            fos.write(combined.getBytes());
+            Toast.makeText(this, "Saved Build!", Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null) {
+                try {
+                    fos.close();
 
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+    }
+    public void home(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

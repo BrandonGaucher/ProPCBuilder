@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".storage"></activity>
+        <activity android:name=".savedBuilds"></activity>
+        <activity android:name=".storage" />
         <activity android:name=".mobo" />
         <activity android:name=".psu" />
         <activity android:name=".ram" />

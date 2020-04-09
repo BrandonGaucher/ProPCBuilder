@@ -14,10 +14,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/budget"
-        app:layout_constraintStart_toEndOf="@+id/buildName" />
+        app:layout_constraintStart_toEndOf="@+id/readBuildName" />
 
     <TextView
-        android:id="@+id/buildName"
+        android:id="@+id/readBuildName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -34,7 +34,7 @@
         android:layout_marginTop="32dp"
         android:text="Enter A Budget:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buildName" />
+        app:layout_constraintTop_toBottomOf="@+id/readBuildName" />
 
     <EditText
         android:id="@+id/buildNameText"
@@ -43,8 +43,8 @@
         android:layout_marginStart="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buildName"
-        app:layout_constraintStart_toEndOf="@+id/buildName" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/readBuildName"
+        app:layout_constraintStart_toEndOf="@+id/readBuildName" />
 
     <Button
         android:id="@+id/button"

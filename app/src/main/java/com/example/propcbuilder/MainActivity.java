@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewBuildForm.class);
         startActivity(intent);
     }
+    public void savedBuilds(View view){
+        Intent intent = new Intent(this, savedBuilds.class);
+        startActivity(intent);
+    }
 
 
 }
